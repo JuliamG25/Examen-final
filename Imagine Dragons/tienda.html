@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda en Línea</title>
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/estilos.css">
+    <script src="https://www.paypal.com/sdk/js?client-id=TU_CLIENT_ID&currency=USD"></script>
+
+
+</head>
+<header>
+    <nav>
+        <a class="nav-link" href="index.html">Home </a>
+        <a class="nav-link" href="https://es.wikipedia.org/wiki/Imagine_Dragons">acerca </a>
+        <a href="#" onclick="location.href='tienda.html'" name="boton">Tienda</button></a>
+        <a href="#" onclick="location.href='login.html'" name="boton">Login</button></a>
+    </nav>
+    <section class="textos-header">
+        <h1>Tienda en Linea </h1>
+        <h2>By JG</h2>
+    </section>
+    <div class="wave" style="height: 150px; overflow: hidden;"><svg viewBox="0 0 500 150" preserveAspectRatio="none"
+            style="height: 100%; width: 100%;">
+            <path d="M0.00,49.98 C150.00,150.00 349.20,-50.00 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
+                style="stroke: none; fill: rgb(240, 0, 0);"></path>
+        </svg></div>
+</header>
+
+<body>
+    <main>
+        <section class="productos">
+            <h2>Nuestros Productos</h2>
+            <div class="contenedor-productos">
+                <div class="producto">
+                    <img src="img/producto1.jpg" alt="Producto 1">
+                    <h3>Producto 1</h3>
+                    <p>Precio: $20</p>
+                    <button onclick="agregarAlCarrito('Producto 1', 20)">Agregar al carrito</button>
+                </div>
+                <div class="producto">
+                    <img src="img/producto2.jpg" alt="Producto 2">
+                    <h3>Producto 2</h3>
+                    <p>Precio: $30</p>
+                    <button onclick="agregarAlCarrito('Producto 2', 30)">Agregar al carrito</button>
+                </div>
+                <div class="producto">
+                    <img src="img/producto3.jpg" alt="Producto 3">
+                    <h3>Producto 3</h3>
+                    <p>Precio: $25</p>
+                    <button onclick="agregarAlCarrito('Producto 3', 25)">Agregar al carrito</button>
+                </div>
+                <div class="producto">
+                    <img src="img/producto4.jpg" alt="Producto 4">
+                    <h3>Producto 3</h3>
+                    <p>Precio: $25</p>
+                    <button onclick="agregarAlCarrito('Producto 4', 25)">Agregar al carrito</button>
+                </div>
+                <div class="producto">
+                    <img src="img/producto5.jpg" alt="Producto 5">
+                    <h3>Producto 3</h3>
+                    <p>Precio: $25</p>
+                    <button onclick="agregarAlCarrito('Producto 5', 25)">Agregar al carrito</button>
+                </div>
+                <div class="producto">
+                    <img src="img/producto6.jpg" alt="Producto 6">
+                    <h3>Producto 3</h3>
+                    <p>Precio: $25</p>
+                    <button onclick="agregarAlCarrito('Producto 6', 25)">Agregar al carrito</button>
+                </div>
+                <div class="producto">
+                    <img src="img/producto7.jpg" alt="Producto 7">
+                    <h3>Producto 3</h3>
+                    <p>Precio: $25</p>
+                    <button onclick="agregarAlCarrito('Producto 7', 25)">Agregar al carrito</button>
+                </div>
+                <div class="producto">
+                    <img src="img/producto8.jpg" alt="Producto 8">
+                    <h3>Producto 3</h3>
+                    <p>Precio: $25</p>
+                    <button onclick="agregarAlCarrito('Producto 8', 25)">Agregar al carrito</button>
+                </div>
+                <div class="producto">
+                    <img src="img/producto9.jpg" alt="Producto 9">
+                    <h3>Producto 3</h3>
+                    <p>Precio: $25</p>
+                    <button onclick="agregarAlCarrito('Producto 9', 25)">Agregar al carrito</button>
+                </div>
+            </div>
+        </section>
+        <section class="carrito">
+            <h2>Carrito de Compras</h2>
+            <div class="contenedor-carrito">
+            </div>
+            <div class="total-carrito">
+                <p id="total-carrito">Total: $45</p>
+             <button id="pagar" onclick="realizarPago()" >Pagar</button>
+             
+             <br>
+             <br>
+             <br>
+
+            </div>
+            <script src="https://www.paypal.com/sdk/js?client-id=test&currency=USD"></script>
+            <div id="paypal-button-container"></div>
+            <script>
+            paypal.Buttons({
+            }).render('#paypal-button-container');
+            </script>
+            
+        </section>
+
+
+    </main>
+    <footer>
+        <p>&copy; 2023 Tienda en Línea. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+
+</html>

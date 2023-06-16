@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+      <title>Bienvenido</title>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="login.css">
+        <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/estilos.css">
+    <header>
+      <nav>
+          <a class="nav-link" href="index.html">Home </a>
+          <a class="nav-link" href="https://es.wikipedia.org/wiki/Imagine_Dragons">Acerca </a>
+          <a href="#" onclick="location.href='tienda.html'" name="boton">Tienda</button></a>
+          <a href="#" onclick="location.href='login.html'" name="boton">Login</button></a>
+      </nav>
+  </head>
+  <body>
+    <section class="form-login">
+      <h5>Ingrese por favor </h5>
+      <form action="validar.php" method="POST">
+      <div class="input-group">
+        <input required="" type="text" name="Usuario" autocomplete="on" class="input" >
+        <label class="user-label">Username</label>
+      </div>
+      <div class="input-group">
+        <input required="" type="password" name="Clave" autocomplete="on" class="input" >
+        <label class="user-label">Password</label>
+      </div>
+      <input class="buttons" type="submit" name="ingresar" value="Ingresar" name=i>
+      
+      <p><button onclick="location.href='https://wa.me/573214621060'" <a href="#">¿Olvidastes tu Contraseña? </a> </button></p>
+      <script src="script.js"></script>
+
+
+    </section>
+
+    <script>
+      
+      document.addEventListener('DOMContentLoaded', function () {
+        let params = (new URL(document.location)).searchParams;
+
+        if (params.has("error"))
+        {
+          if (params.get("error") === "login")
+          {
+            Swal.fire(
+              'Error',
+              'Usuario o contraseña incorrectos',
+              'error'
+            );
+          }
+        }
+      }, false);
+
+      
+      
+    </script>
+
+    </body>
+</html>
